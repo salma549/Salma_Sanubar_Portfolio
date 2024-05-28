@@ -7,18 +7,16 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-gray-800 via-black to-black  ">
-    
+      className="h-screen w-full bg-gradient-to-b from-gray-800 via-black to-black"
+    >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
-          <h2 className="text-3xl sm:text-6xl font-bold text-white">
+        <div className="flex flex-col justify-center h-full md:w-1/2">
+          <h2 className=" mt-10 text-3xl sm:text-6xl font-bold text-white">
             I'm a Full Stack Developer
-          </h2><br/>
-          <p className="text-white text-1xl py-6  max-w-md ">
-          As a skilled MERN stack developer, I build dynamic web applications with MongoDB, Express.js, React, and Node.js, enhancing user experiences and driving business growth.
+          </h2>
+          <p className="text-white text-lg py-6 max-w-md">
+            As a skilled MERN stack developer, I build dynamic web applications with MongoDB, Express.js, React, and Node.js, enhancing user experiences and driving business growth.
           </p>
-         <br/>
-
           <div>
             <Link
               to="portfolio"
@@ -33,13 +31,11 @@ const Home = () => {
             </Link>
           </div>
         </div>
-
-        <div>
-        <img
+        <div className="flex justify-center items-center md:w-1/2">
+          <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-full
-             w-[250px] h-[300px] md:w-full"
+            className="rounded-full w-64 h-64 md:w-[300px] md:h-[350px] object-cover"
           />
         </div>
       </div>

@@ -7,11 +7,10 @@ import reactImage from "../assets/reactImage.png";
 import nodejs from "../assets/nodejs.png";
 import github from "../assets/github.png";
 import linux from "../assets/linux.png";
-import mongoDB from "../assets/mongoDB.png";
+import mongoDB from "../assets/mongoDB.jpg";
 import tailwind from "../assets/tailwind.png";
 import expressImg from "../assets/expressImg.png";
 import excel from "../assets/excel.png";
-
 
 const Experience = () => {
   const techs = [
@@ -49,7 +48,7 @@ const Experience = () => {
       id: 6,
       src: nodejs,
       title: "Node JS",
-      style: "shadow-white",
+      style: "shadow-green-500",
     },
     {
       id: 7,
@@ -72,14 +71,14 @@ const Experience = () => {
     {
       id: 10,
       src: mongoDB,
-      title: "mongoDB",
-      style: "shadow-gray-400",
+      title: "MongoDB",
+      style: "shadow-green-500",
     },
     {
       id: 11,
       src: excel,
       title: "Excel",
-      style: "shadow-gray-400",
+      style: "shadow-green-400",
     },
   ];
 
@@ -93,16 +92,16 @@ const Experience = () => {
           <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
             Experience
           </p>
-          <p className="py-6 ">These are the technologies I've worked with</p>
+          <p className="py-6">These are the technologies I've worked with</p>
         </div>
 
-        <div className="w-full grid grid-cols-4 sm:grid-cols-4 gap-7 text-center py-8 px-12 sm:px-0">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-7 text-center py-8 px-12 sm:px-0">
           {techs.map(({ id, src, title, style }) => (
             <div
               key={id}
               className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
             >
-              <img src={src} alt="" className="w-20 mx-auto" />
+              <img src={src} alt={title} className="w-20 mx-auto" />
               <p className="mt-4">{title}</p>
             </div>
           ))}

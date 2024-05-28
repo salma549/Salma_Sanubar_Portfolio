@@ -9,8 +9,6 @@ import Voting from "../assets/portfolio/Voting.png";
 
 const Portfolio = () => {
   const portfolios = [
-    
-  
     {
       id: 1,
       src: netflixMovies,
@@ -40,7 +38,7 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b from-gray-800 via-black to-black  w-full h-screen text-white md:h-auto"
+      className="bg-gradient-to-b from-gray-800 via-black to-black w-full h-auto text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -50,7 +48,7 @@ const Portfolio = () => {
           <p className="py-6">Check out some of my work right here</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-7 px-12 sm:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 px-12 sm:px-0">
           {portfolios.map(({ id, src }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
