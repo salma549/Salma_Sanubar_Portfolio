@@ -1,5 +1,6 @@
 import React from "react";
 
+import GitHubSearchEngine from "../assets/portfolio/search.png";
 import netflixMovies from "../assets/portfolio/netflixMovies.png";
 import netflix from "../assets/portfolio/netflix.png";
 import Weather from "../assets/portfolio/weather.png";
@@ -11,27 +12,45 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: netflixMovies,
+      src: GitHubSearchEngine,
+      demoLink: "https://salma549.github.io/votingsPoll/",
+      codeLink: "https://github.com/salma549/Salma_githubSearchEngine",
     },
     {
       id: 2,
-      src: netflix,
+      src: netflixMovies,
+      demoLink: "https://netflixmovies-demo.com",
+      codeLink: "https://github.com/salma549/netflixMovies",
     },
     {
       id: 3,
-      src: Color,
+      src: netflix,
+      demoLink: "https://netflix-demo.com",
+      codeLink: "https://github.com/salma549/Netflix-Clone",
     },
     {
       id: 4,
-      src: Game,
+      src: Color,
+      demoLink: "https://color-demo.com",
+      codeLink: "https://github.com/salma549/bgChanger-react",
     },
     {
       id: 5,
-      src: Weather,
+      src: Game,
+      demoLink: "https://game-demo.com",
+      codeLink: "https://github.com/salma549/numberGuessGame",
     },
     {
       id: 6,
+      src: Weather,
+      demoLink: "https://weather-demo.com",
+      codeLink: "https://github.com/salma549/weatherAPI",
+    },
+    {
+      id: 7,
       src: Voting,
+      demoLink: "https://salma549.github.io/votingsPoll/",
+      codeLink: "https://github.com/salma549/votingsPoll",
     },
   ];
 
@@ -49,20 +68,32 @@ const Portfolio = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src, demoLink, codeLink }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-              <img
-                src={src}
-                alt=""
-                className="rounded-md duration-200 hover:scale-105"
-              />
+              <div className="h-48 w-full overflow-hidden flex justify-center items-center">
+                <img
+                  src={src}
+                  alt=""
+                  className="h-full w-auto object-cover"
+                />
+              </div>
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <a
+                  href={demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 text-center"
+                >
                   Demo
-                </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                </a>
+                <a
+                  href={codeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 text-center"
+                >
                   Code
-                </button>
+                </a>
               </div>
             </div>
           ))}

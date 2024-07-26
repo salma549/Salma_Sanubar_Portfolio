@@ -1,12 +1,15 @@
 import React from "react";
+import BackgroundImage from "../assets/images/bg.jpg"; // Import the background image
 
 const Contact = () => {
   return (
     <div
       name="contact"
-      className="w-full h-auto bg-gradient-to-b from-gray-900 via-black to-black p-4 text-white"
+      className="relative w-full h-auto bg-cover bg-center bg-no-repeat p-4 text-white"
+      style={{ backgroundImage: `url(${BackgroundImage})` }} // Corrected the style prop syntax
     >
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-900 via-black to-black opacity-75"></div> {/* Add an overlay */}
+      <div className="relative z-10 flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
