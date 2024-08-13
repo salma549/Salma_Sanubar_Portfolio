@@ -13,7 +13,7 @@ const Portfolio = () => {
     {
       id: 1,
       src: GitHubSearchEngine,
-      demoLink: "https://salma549.github.io/votingsPoll/",
+      demoLink: " https://salma549.github.io/Salma_githubSearchEngine/",
       codeLink: "https://github.com/salma549/Salma_githubSearchEngine",
     },
     {
